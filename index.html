@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interacción Romántica</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-image: url('https://i.pinimg.com/originals/aa/13/10/aa13105e4154f3b50eead2c7b1127783.jpg'); /* URL de tu imagen de fondo */
+        background-size: cover;
+        color: black; /* Color del texto */
+        text-align: center;
+        margin-top: 100px;
+    }
+    .container {
+        background-color: rgba(249, 214, 231, 0.8); /* Color del contenedor con transparencia */
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+    }
+    button {
+        background-color: #c3aed6; /* Color del botón */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+
+<div class="container" id="container1">
+    <p>Te extraño</p>
+    <button onclick="respuestaYoTambien()">Yo también</button>
+    <button onclick="respuestaYoNo()">Yo no</button>
+</div>
+
+<div class="container" id="container2" style="display: none;">
+    <div id="respuesta"></div>
+</div>
+
+<script>
+function respuestaYoTambien() {
+    document.getElementById("container1").style.display = "none";
+    document.getElementById("container2").style.display = "block";
+    document.getElementById("respuesta").innerHTML = "¿Nos vemos hoy?<br><button onclick='respuestaSiAmor()'>Sí, amor</button><button onclick='respuestaNo()'>No</button>";
+}
+
+function respuestaYoNo() {
+    document.getElementById("container1").style.display = "none";
+    document.getElementById("container2").style.display = "block";
+    document.getElementById("respuesta").innerHTML = "Bueno ;)";
+}
+
+function respuestaNo() {
+    document.getElementById("container1").style.display = "none";
+    document.getElementById("container2").style.display = "block";
+    document.getElementById("respuesta").innerHTML = "Bueno ;)";
+}
+
+function respuestaSiAmor() {
+    document.getElementById("respuesta").innerHTML = "¿A qué hora?<br>Me lo dices por WhatsApp";
+}
+</script>
+
+</body>
+</html>
